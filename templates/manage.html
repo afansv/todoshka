@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Изменение заметки</h1>
+<form action="/update/{{ note.admin_token }}" method="POST">
+    <textarea rows="4" name="todo" id="todo">{{ note.note_temp }}</textarea><br>
+    <input type="submit">
+</form>
+<form action="/delete/{{ note.admin_token }}" method="POST">
+    <button type="submit">Удалить</button>
+</form>
+</body>
+</html>
